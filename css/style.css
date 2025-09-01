@@ -14,6 +14,7 @@ Button Text: Blue: #24303B
 body {
     background-color: #F5F7FB
 }
+
 body {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
@@ -43,25 +44,31 @@ header {
 
 h1, h2, h3, h4 {line-height: 1.2
 }
+
 h1 {font-size: 2.75em;
     font-weight: 700;
 }
+
 h2 {
     font-size: 2.25em;
     font-weight: 600;
 }
+
 h3 {
     font-size: 1.75em;
     font-weight: 500;
 }
+
 h4 {
     font-size: 1.35em;
     font-weight: 400;
     text-align: center;
 }
+
 p{
     color:#3B4A5A
 }
+
 img {
   width: 100%;
 }
@@ -125,33 +132,39 @@ nav > ul > li > a:hover {
   font-weight: 400;
   font-style: normal;
 }
+
 .jakarta-sans {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
+
 /* IMAGES */
 .socials {
     width: 24px;
     height:auto;
     display: inline-block;
 }
+
 .socials.list {
     display: block;
     width: 100%;
 }
+
 .socials.list ul {
     list-style: none;
     padding: 0px;
     margin: 0px;
     text-align: center;
 }
+
 .socials.list ul li {
     display: inline-block;
     vertical-align: middle;
     margin: 0 0px;
 }
+
 .socials.list svg {
     width: 40px;
     height: 40px;
@@ -161,22 +174,24 @@ nav > ul > li > a:hover {
     transition: transform 0.2s ease, opacity 0.2s ease;
     transform-origin: 50% 50%;
 }
+
 .socials.list svg:hover {
     fill: #2dd4bf;
     transform: scale(0.9);
     opacity: 0.7;
 }
+
 .socials.list svg:active {
     transform: scale(0.9);
     opacity: 0.7;
 }
-
 
 /* FOOTER */
 .footer {
     width: 200px;
     height: auto;
 }
+
 strong {
     font-size: 1.1em;
 }
@@ -203,6 +218,7 @@ strong {
     width: 100%;
     padding-top: 177px;
 }
+
 #hero h1 {
     text-align: center;
 }
@@ -221,12 +237,14 @@ strong {
     width: 100%;
     Padding-top: 177px;
 }
+
 #overview {
     background-color: #f5f7fb;
     display: inline-block;
     width: 100%;
     padding-top: 177px;
 }
+
 .center {
     text-align: center;
 }
@@ -242,7 +260,7 @@ strong {
 .button { /*KEEP THIS AT THE BOTTOM OF YOUR CODE*/
   display: inline-block; /* since the <a> tag is inline by default */
   background-color: #FF6B6B;
-  color: #24303B;
+  color: #0E1B2C;
   font-weight: 400;
   font-size: 18px; 
   padding: 12px 24px;
@@ -251,6 +269,7 @@ strong {
   transition: 0.6s opacity;
   transition: background-color 0.6s ease, color 0.6s ease, border-color 0.6s ease
 }
+
 .button:hover {
   opacity: 0.8;
   background-color: #F5F7FB;
@@ -259,18 +278,21 @@ strong {
   text-decoration: none;
   opacity: 1;
 }
+
 .button.contact {
   background-color: transparent;
   color: #ff6b6b;
   text-transform: uppercase;
   border: 2px solid #F5F7FB;
 }
+
 .button.contact:hover {
     background-color: #F5F7FB;
   color: #2dd4bf;
   text-decoration: underline;
   border-color: #F5F7FB
 }
+
 .button.sticky,
 .button.sticky:link,
 .button.sticky:active {
@@ -293,6 +315,7 @@ strong {
     color 0.3s ease,
     border-color 0.3s ease;
 }
+
 .button.sticky:hover,
 .button.sticky:active,
 .button.sticky:focus {
@@ -301,6 +324,7 @@ strong {
     color: #0E1B2C;
     text-decoration: none;
 }
+
 .button.sticky:focus {
   outline: 2px solid #2DD4BF;    /* mint focus ring */
   outline-offset: 2px;
@@ -308,6 +332,7 @@ strong {
   border-color: #FF6B6B;
   text-decoration: none;
 }
+
 .button.prototype {
     margin-bottom: 16px;
     text-align: center;
