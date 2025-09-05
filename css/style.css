@@ -94,7 +94,7 @@ nav a:focus {
 nav a.active {
   color: #2DD4BF;                /* highlight current page */
   font-weight: 600;
-  text-decoration: underline;
+  text-decoration: none;
 
 }
 
