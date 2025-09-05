@@ -83,6 +83,7 @@ nav a {
   transition: color 0.3s ease;
   display: inline-block;
   width: 100%;
+  text-decoration: none;
 }
 
 nav a:hover,
@@ -93,6 +94,8 @@ nav a:focus {
 nav a.active {
   color: #2DD4BF;                /* highlight current page */
   font-weight: 600;
+  text-decoration: underline;
+
 }
 
 nav > ul {
@@ -177,7 +180,7 @@ nav > ul > li > a:hover {
 
 .socials.list svg:hover {
     fill: #2dd4bf;
-    transform: scale(0.9);
+    transform: scale(1.2);
     opacity: 0.7;
 }
 
@@ -208,8 +211,18 @@ strong {
 
 }
 
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 #work .row {
     padding-bottom: 25px;border-bottom: 1px solid #4a4a4a;
+}
+
+#work .row > h3 {
+  margin: 0 0 12px;            /* no top margin; small space under the h3 */
 }
 
 #hero {
@@ -253,9 +266,82 @@ strong {
     text-align: center;
 }
 
+.center {
+    text-align: center;
+}
 
+.bio-photo {
+   width: clamp(440px, 40vw, 340px);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-inline: auto;
+  border-radius: 12px;
+}
 
+.berlin-illustration {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
 
+@keyframes color-change {
+    from {fill: #edc655;}
+    to {fill: #ff6b6b;}
+}
+
+@keyframes cloud-move {
+    from {transform: translate(0px, 50px);}
+    to {transform: translate(200px, 50px)}
+}
+
+.cloud-front {
+    animation: 15s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+    from {transform: translate(446px, 48px);}
+    to {transform: translate(100px, 48px);}
+}
+
+.sun {
+    animation: 2s color-change infinite alternate linear;
+}
+
+.cloud-back {
+    animation: 15s cloud-move-reverse infinite alternate linear;
+}
+
+/* Nav Animation */
+nav a:before, nav a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+nav a:before
+{
+    top: 0px;
+    transform: translateY(-10px);
+}
+
+nav a:after
+{
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+nav a:hover:before, nav a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
 
 .button { /*KEEP THIS AT THE BOTTOM OF YOUR CODE*/
   display: inline-block; /* since the <a> tag is inline by default */
@@ -284,12 +370,14 @@ strong {
   color: #ff6b6b;
   text-transform: uppercase;
   border: 2px solid #F5F7FB;
+  text-decoration: none;
 }
 
 .button.contact:hover {
     background-color: #F5F7FB;
+    transform: scale(1.05);
+    text-decoration: underline;
   color: #2dd4bf;
-  text-decoration: underline;
   border-color: #F5F7FB
 }
 
@@ -336,4 +424,67 @@ strong {
 .button.prototype {
     margin-bottom: 16px;
     text-align: center;
+}
+
+
+
+/*===========================
+Medium Devices (640px and Larger)
+=============================*/
+@media only screen and (min-width: 640px) { 
+    header {
+        text-align: unset;
+        padding: 20px 0 13px;
+    } 
+    .logo {
+        float: left;
+        width: auto;
+        margin-bottom: 12px;
+    }
+    nav {
+        width: auto;
+        float: right;
+        margin-top: 16px;
+    }
+    nav a {
+        width: auto;
+        display: inline-block;
+    }
+    #hero {
+        padding-top: 140px;
+    }
+    .col-md-6 {
+        width: 50%;
+    }
+      #work .row h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  #work .row .col-md-6 p:first-of-type {
+    margin-top: 0;
+  }
+
+  #work .row .col-md-6 p:first-of-type {
+    margin-top: 0;
+  }
+}
+[class*="col-"] {
+  float: left;
+  padding: 12px;
+}
+
+/*===========================
+Large Devices (1024px or Larger)
+=============================*/
+@media only screen and (min-width: 1024px) {  
+ .container {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  /* 12-col grid widths for desktop */
+  .col-lg-5 { width: 41.6667%; }   /* 5 / 12 */
+
+  body { font-size: 18px; }
 }
