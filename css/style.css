@@ -504,7 +504,7 @@ nav a.icon::after {
 }
 
 .button.sticky i {
-  font-size: 18px;               /* tweak 18–22px to taste */
+  font-size: 18px;
   line-height: 1;
 }
 
