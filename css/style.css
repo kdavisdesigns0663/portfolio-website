@@ -32,7 +32,6 @@ header {
     margin: 0px;
     position: fixed;
     width: 100%;
-    text-align: center;
     /* Header Drop Shadow */
 	height: auto; 
 	background: #0E1B2C; 
@@ -40,6 +39,13 @@ header {
 	box-shadow: 4px 5px 20px rgba(0, 0, 0, 0.4)  ; 
 	-webkit-box-shadow: 4px 5px 20px rgba(0, 0, 0, 0.4)  ; 
 	-moz-box-shadow: 4px 5px 20px rgba(0, 0, 0, 0.4)  ; 
+    padding-bottom: 10px;
+}
+
+header .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 h1, h2, h3, h4 {line-height: 1.2
@@ -81,9 +87,15 @@ nav a {
   font-size: 18px;
   position: relative;
   transition: color 0.3s ease;
-  display: inline-block;
-  width: 100%;
   text-decoration: none;
+}
+
+nav a.icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
 }
 
 nav a:hover,
@@ -101,11 +113,7 @@ nav a.active {
 nav > ul {
     list-style-type: none;
     padding: 0;
-}
-
-nav > ul > li {
-    display: inline-block
-
+    margin: 0;
 }
 
 nav > ul > li > a {
@@ -123,9 +131,65 @@ nav > ul > li > a:hover {
     color: #f5f7fb
 }
 
+/* HAMBURGER MENU */
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive{
+  position: relative;
+  width: 100%;
+  padding-right: 56px;
+}
+
+.navtoggle li .icon,
+.navtoggle.responsive li .icon {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+  transform: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  line-height: 1;
+  padding: 0;
+}
+
+.navtoggle.responsive li { 
+  display: block;
+}
+
+.navtoggle.responsive li a:not(.icon) { 
+  display: block;
+  padding: 10px 0;
+}
+
+.navtoggle li .icon,
+.navtoggle.responsive li .icon{
+  position: absolute;
+  right: 0;
+  top: 8px; 
+  transform: none;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  line-height: 1;
+}
+
 /* LOGO */
-.logo {
-  max-width: 250px;
+
+.logo{
+  width: auto;          /* override the global width:100% */
+  max-width: 150px;     /* smaller logo on mobile */
+  height: auto;
+  display: block;
 }
 
 /* FONTS */
@@ -228,7 +292,7 @@ strong {
     background-color: #f5f7fb;
     display: inline-block;
     width: 100%;
-    padding-top: 177px;
+    padding-top: 70px;
 }
 
 #hero h1 {
@@ -247,7 +311,7 @@ strong {
     background-color: f5f7fb;
     display: inline-block;
     width: 100%;
-    Padding-top: 177px;
+    Padding-top: 70px;
 }
 
 #overview {
@@ -340,6 +404,11 @@ nav a:hover:before, nav a:hover:after
 {
     opacity: 1;
     transform: translateY(0px);
+}
+
+nav a.icon::before,
+nav a.icon::after {
+  content: none !important;
 }
 
 .button { /*KEEP THIS AT THE BOTTOM OF YOUR CODE*/
@@ -435,27 +504,42 @@ Medium Devices (640px and Larger)
         text-align: unset;
         padding: 20px 0 13px;
     } 
+    
     .logo {
         float: left;
         width: auto;
         margin-bottom: 12px;
+        max-width: 250px;
     }
+    
     nav {
         width: auto;
         float: right;
         margin-top: 16px;
     }
+    
     nav a {
         width: auto;
         display: inline-block;
     }
+
+    nav > ul {
+    margin: 1em 0;
+}
+    
+    nav > ul > li {
+    display: inline-block
+}
+   
     #hero {
         padding-top: 140px;
     }
+    
     .col-md-6 {
         width: 50%;
     }
-      #work .row h3 {
+    
+    #work .row h3 {
     margin-top: 0;
     margin-bottom: 16px;
   }
@@ -467,10 +551,23 @@ Medium Devices (640px and Larger)
   #work .row .col-md-6 p:first-of-type {
     margin-top: 0;
   }
-}
+
 [class*="col-"] {
   float: left;
   padding: 12px;
+}
+
+.navtoggle { width: 100%; padding-right: 0; }
+
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+
+.navtoggle li:last-child {
+  display: none;
+}
+
+ #about { padding-top: 140px; } /* or 177px if you prefer */
 }
 
 /*===========================
