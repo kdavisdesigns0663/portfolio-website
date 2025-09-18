@@ -494,6 +494,20 @@ nav a.icon::after {
     text-align: center;
 }
 
+.button.sticky {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button.sticky i {
+  font-size: 18px;               /* tweak 18–22px to taste */
+  line-height: 1;
+}
+
 
 
 /*===========================
