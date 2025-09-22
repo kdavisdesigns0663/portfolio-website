@@ -186,7 +186,7 @@ nav > ul > li > a:hover {
 /* LOGO */
 
 .logo{
-  width: auto;          /* override the global width:100% */
+  width: auto;
   max-width: 150px;     /* smaller logo on mobile */
   height: auto;
   display: block;
@@ -285,7 +285,7 @@ strong {
 }
 
 #work .row > h3 {
-  margin: 0 0 12px;            /* no top margin; small space under the h3 */
+  margin: 0 0 12px;
 }
 
 #hero {
@@ -411,7 +411,7 @@ nav a.icon::after {
   content: none !important;
 }
 
-/* Resume ONLY — borders-out animation */
+/* Resume link animation */
 nav a.resume-link::before,
 nav a.resume-link::after {
   position: absolute;
@@ -424,11 +424,9 @@ nav a.resume-link::after {
   transition: all 0.3s;
 }
 
-/* start offset reversed */
 nav a.resume-link::before { top: 0;    transform: translateY(10px); }
 nav a.resume-link::after  { bottom: 0; transform: translateY(-10px); }
 
-/* bring lines IN on hover/focus */
 nav a.resume-link:hover::before,
 nav a.resume-link:focus::before,
 nav a.resume-link:hover::after,
@@ -615,7 +613,7 @@ Medium Devices (640px and Larger)
   display: none;
 }
 
- #about { padding-top: 140px; } /* or 177px if you prefer */
+ #about { padding-top: 140px; }
 }
 
 /*===========================
@@ -645,10 +643,10 @@ Large Devices (1024px or Larger)
 .lightbox-overlay {
   position: fixed;
   inset: 0;
-  display: none;                  /* toggled with .open */
+  display: none; 
   align-items: center;
   justify-content: center;
-  background: rgba(14, 27, 44, 0.92); /* your Navy with opacity */
+  background: rgba(14, 27, 44, 0.92);
   z-index: 3000;
   padding: 24px;
 }
