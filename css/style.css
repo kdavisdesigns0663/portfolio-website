@@ -25,6 +25,19 @@ body {
   color: #0E1B2C
 }
 
+/* NAV BAR */
+footer {
+    background-color: #0E1B2C;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+footer,
+footer h2,
+footer p {
+  color: #F5F7FB;
+}
+
 /* HEADER BAR */
 header {
     background-color: #0E1B2C;
@@ -69,6 +82,10 @@ h4 {
     font-size: 1.35em;
     font-weight: 400;
     text-align: center;
+}
+
+h4.subhead {
+    text-align: left;
 }
 
 p{
@@ -245,7 +262,7 @@ nav > ul > li > a:hover {
 .socials.list svg:hover {
     fill: #2dd4bf;
     transform: scale(1.2);
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .socials.list svg:active {
@@ -308,7 +325,7 @@ strong {
 }
 
 #about {
-    background-color: f5f7fb;
+    background-color: #f5f7fb;
     display: inline-block;
     width: 100%;
     Padding-top: 70px;
@@ -453,7 +470,6 @@ nav a.resume-link:focus { color: #2DD4BF; }
 }
 
 .button:hover {
-  opacity: 0.8;
   background-color: #F5F7FB;
   color: #0E1B2C;
   border-color: #0E1B2C;
@@ -536,6 +552,21 @@ nav a.resume-link:focus { color: #2DD4BF; }
   line-height: 1;
 }
 
+footer .button {
+    opacity: 1;
+}
+
+footer .button.contact {
+  border: none;
+}
+
+footer .button.contact:hover,
+footer .button.contact:focus {
+  background: transparent;      /* no white hover background */
+  border: none;                 /* keep border gone on hover */
+}
+
+
 
 
 /*===========================
@@ -615,6 +646,12 @@ Medium Devices (640px and Larger)
 
  #about { padding-top: 140px; }
 }
+
+
+  .button.zentrabutton {
+    display: inline-block;    /* already true, but explicit */
+    margin-bottom: 22px;      /* tweak 40–72px to taste */
+  }
 
 /*===========================
 Large Devices (1024px or Larger)
@@ -700,7 +737,7 @@ Large Devices (1024px or Larger)
 .lightbox-next:hover {
   background: rgba(255,255,255,.08);
   transform: scale(1.04);
-}a2
+}
 
 /* Prevent background scroll when lightbox open */
 body.lb-lock { overflow: hidden; }
